@@ -1,0 +1,93 @@
+.news {
+    overflow-x: scroll;
+    margin-bottom: 50px;
+    width: 1000px;
+
+    @media only screen and (max-width:$bp-largest) {
+        width: auto;
+    }
+   
+    
+    &__head {
+        display: flex;
+        align-content: space-between;
+        padding: 30px;
+    }
+
+    &__text {
+        margin-right: 10px;
+        color: var(--color-title);
+        font-family: $font-box;
+        font-weight: 700;
+
+        &-current {
+            color: var(--color-news-text);
+            font-weight: 400;
+            margin-left: 10px;
+        }
+    }
+    &__blog {
+        display: flex;
+        margin-bottom: 40px;
+
+        &-first,
+        &-second,
+        &-third,
+        &-fourth {
+           border: 2px solid var(--color-grey);
+           margin-right: 35px;
+           border-radius: 10px;
+
+           &-inner {
+               padding: 30px;
+               position: relative;
+           }
+        }
+
+        &-category {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            &-title {
+                color: var(--color-news-text);
+                margin-bottom: 0;
+                margin-left: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+      
+
+        &-title {
+            color: var(--color-title);
+            font-weight: 700;
+        }
+
+        &-paragraph {
+            color: var(--color-news-paragraph);
+        }
+
+        &-date {
+            padding: 5px 15px;
+            background-color: var(--color-title);
+            border-radius: 10px;
+            color: var(--color-white);
+            font-size: 16px;
+            text-align: center;
+            position: absolute;
+            right: 50px;
+            bottom: 150px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    height: 5px;             
+    width: 4px;              
+    border: 1px solid transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal{
+    background: grey;
+    border-radius: 10px;
+}

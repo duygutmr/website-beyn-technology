@@ -1,0 +1,40 @@
+:root {
+    --color-white: rgb(255, 255, 255);
+    --color-grey: rgb(201, 201, 201);
+    --color-blue: rgb(61, 47, 183);
+    --color-green: rgb(18, 216, 121);
+    --color-grey: rgb(243, 244, 247);
+    --color-title: rgb(6, 29, 89);
+    --color-box-paragraph: rgb(127, 136, 147);
+    --color-box-minutes: rgb(85, 99, 133);
+    --color-box-league: rgb(144, 152, 161);
+    --color-news-text: rgb(183, 186, 195);
+    --color-news-paragraph: rgb(176, 182, 198);
+    --color-footer: rgb(183, 186, 195);
+}
+
+$font-box: 'Lato', sans-serif;
+$-font-box-numbers: 'Open Sans', sans-serif;
+
+$bp-largest: 1200px;
+$bp-large: 1100px;
+$bp-medium: 900px;
+$bp-small: 600px;
+$bp-smallest: 321px;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}

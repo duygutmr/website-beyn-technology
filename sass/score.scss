@@ -1,0 +1,78 @@
+.score {
+
+    &__box {
+        padding: 50px 0;
+        
+    }
+
+    &__inner {
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+
+    &__team-italy,
+    &__team {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 10px;
+
+        &-head {
+            display: flex;
+            align-items: center;
+
+            &-icon {
+                margin-left: 100px;
+                @media only screen and (max-width:$bp-small) {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+       
+        
+
+        h5 {
+            color: var(--color-title);
+            font-weight: 700;
+            margin-left: 10px;
+            
+        }
+
+       
+
+        &-details {
+            display: flex;
+            color: var(--color-title);
+            font-weight: 700;
+
+            div {
+                margin-left: 10px;
+            }
+
+            &-show {
+                text-align: center;
+                border-top: 1px solid #dee2e6;
+                color: var(--color-green);
+                font-weight: 700;
+                padding: 20px 0;
+                cursor: pointer;
+            }
+        }
+    }
+    &__team{
+        border-top: 1px solid #dee2e6;
+        padding: 15px 10px;
+
+        span {
+            color: var(--color-title);
+            font-weight: 700;
+        }
+    }
+
+   &__grey {
+    color: var(--color-news-text);
+    font-weight: 400;
+   }
+}
