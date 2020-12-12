@@ -62,18 +62,25 @@
     &__input {
         justify-self: end;
         display: flex;
+
         @media only screen and (max-width:$bp-small) {
             display: grid;
             justify-self: center;
         }
 
+        ::placeholder {
+            color: var(--color-placeholder);
+        }
+
+       
+
         &-user,
         &-password {
             border: 0;
-            border-bottom: 2px solid var(--color-blue);
+            border-bottom: 3px solid var(--color-blue);
             outline: 0;
             font-size: 1.3rem;
-            color: black;
+            color: var(--color-placeholder);
             padding: 7px 0;
             background: transparent;
             transition: border-color 0.2s;

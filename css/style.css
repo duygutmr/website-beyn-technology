@@ -3,6 +3,7 @@
   --color-grey: rgb(201, 201, 201);
   --color-blue: rgb(61, 47, 183);
   --color-green: rgb(18, 216, 121);
+  --color-placeholder: rgb(40, 39, 40);
   --color-grey: rgb(243, 244, 247);
   --color-title: rgb(6, 29, 89);
   --color-box-paragraph: rgb(127, 136, 147);
@@ -89,12 +90,14 @@ html {
       .nav__input {
         display: grid;
         justify-self: center; } }
+    .nav__input ::placeholder {
+      color: var(--color-placeholder); }
     .nav__input-user, .nav__input-password {
       border: 0;
-      border-bottom: 2px solid var(--color-blue);
+      border-bottom: 3px solid var(--color-blue);
       outline: 0;
       font-size: 1.3rem;
-      color: black;
+      color: var(--color-placeholder);
       padding: 7px 0;
       background: transparent;
       transition: border-color 0.2s;
@@ -108,7 +111,8 @@ html {
       padding: 30px 10px; } }
   .section__head {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 30px auto; }
     @media only screen and (max-width: 600px) {
       .section__head {
         display: grid;
@@ -164,8 +168,10 @@ html {
       .section__first-box-info-league, .section__second-box-info-league {
         color: var(--color-box-league);
         font-size: 18px;
-        font-weight: bold;
-        font-family: "Lato", sans-serif; }
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        margin-top: 30px;
+        margin-bottom: 0; }
       .section__first-box-info-text-paragraph, .section__second-box-info-text-paragraph {
         font-weight: 700;
         color: var(--color-box-paragraph);
@@ -211,9 +217,22 @@ html {
       .section__rate {
         display: grid;
         grid-template-columns: repeat(2, 1fr); } }
+    .section__rate-first, .section__rate-second {
+      position: relative; }
+      .section__rate-first-icon-up, .section__rate-second-icon-up {
+        position: absolute;
+        top: 5px;
+        right: 5px; }
+      .section__rate-first-icon-down, .section__rate-second-icon-down {
+        position: absolute;
+        bottom: 5px;
+        right: 5px; }
     .section__rate-first, .section__rate-second, .section__rate-third, .section__rate-fourth {
-      padding: 7px 20px;
+      padding: 10px 20px;
       border-radius: 10px; }
+      .section__rate-first h5, .section__rate-second h5, .section__rate-third h5, .section__rate-fourth h5 {
+        font-weight: 700;
+        margin-bottom: 0; }
     .section__rate-first {
       border: 1px solid #32d083;
       background-color: #effff7;
@@ -275,7 +294,7 @@ html {
         .section__casino-right-input:focus {
           outline: none; }
         .section__casino-right-input::placeholder {
-          font-weight: 700;
+          font-weight: 600;
           font-style: italic;
           color: #b7bac3; }
       .section__casino-right-icon {
@@ -350,8 +369,6 @@ html {
             grid-row: 5 / 6; } }
 
 .news {
-  overflow-x: scroll;
-  margin-bottom: 50px;
   width: 1000px; }
   @media only screen and (max-width: 1200px) {
     .news {
@@ -360,6 +377,9 @@ html {
     display: flex;
     align-content: space-between;
     padding: 30px; }
+    @media only screen and (max-width: 600px) {
+      .news__head {
+        display: block; } }
   .news__text {
     margin-right: 10px;
     color: var(--color-title);
@@ -369,13 +389,18 @@ html {
       color: var(--color-news-text);
       font-weight: 400;
       margin-left: 10px; }
+      @media only screen and (max-width: 600px) {
+        .news__text-current {
+          margin-left: 0; } }
   .news__blog {
     display: flex;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    overflow-x: scroll; }
     .news__blog-first, .news__blog-second, .news__blog-third, .news__blog-fourth {
       border: 2px solid var(--color-grey);
       margin-right: 35px;
-      border-radius: 10px; }
+      border-radius: 10px;
+      margin-bottom: 50px; }
       .news__blog-first-inner, .news__blog-second-inner, .news__blog-third-inner, .news__blog-fourth-inner {
         padding: 30px;
         position: relative; }

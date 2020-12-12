@@ -1,6 +1,4 @@
 .news {
-    overflow-x: scroll;
-    margin-bottom: 50px;
     width: 1000px;
 
     @media only screen and (max-width:$bp-largest) {
@@ -12,6 +10,11 @@
         display: flex;
         align-content: space-between;
         padding: 30px;
+
+        
+        @media only screen and (max-width:$bp-small) {
+            display: block;
+        }
     }
 
     &__text {
@@ -24,11 +27,16 @@
             color: var(--color-news-text);
             font-weight: 400;
             margin-left: 10px;
+            @media only screen and (max-width:$bp-small) {
+                margin-left: 0;
+            }
         }
     }
     &__blog {
         display: flex;
         margin-bottom: 40px;
+        overflow-x: scroll;
+        
 
         &-first,
         &-second,
@@ -37,6 +45,7 @@
            border: 2px solid var(--color-grey);
            margin-right: 35px;
            border-radius: 10px;
+           margin-bottom: 50px;
 
            &-inner {
                padding: 30px;

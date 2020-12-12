@@ -7,6 +7,7 @@
     &__head {
         display: flex;
         justify-content: space-between;
+        margin: 30px auto;
         @media only screen and (max-width:$bp-small) {
             display: grid;
             justify-items: center;
@@ -83,8 +84,10 @@
             &-league {
                 color: var(--color-box-league);
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: 400;
                 font-family: $font-box;
+                margin-top: 30px;
+                margin-bottom: 0;
             }
 
             &-text {
@@ -158,11 +161,31 @@
         }
 
         &-first,
+        &-second {
+            position: relative;
+
+            &-icon-up {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            &-icon-down {
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+            }
+        }
+
+        &-first,
         &-second,
         &-third,
         &-fourth {
-            padding: 7px 20px;
+            padding: 10px 20px;
             border-radius: 10px;
+            h5 {
+                font-weight: 700;
+                margin-bottom: 0;
+            }
         }
 
         &-first {
@@ -250,7 +273,7 @@
             }
 
             &::placeholder {
-                font-weight: 700;
+                font-weight: 600;
                 font-style: italic;
                 color: #b7bac3;
             }
